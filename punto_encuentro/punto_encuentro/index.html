@@ -1,0 +1,61 @@
+<html src="style.css">
+  
+    <head>
+            <title> Punto encuentro </title>
+
+            <button id="registerButton" 
+            onclick="location.href='register.html'"> Registrate </button>
+
+            <button id="loginButton" 
+            onclick="location.href='login.html'"> Login </button>
+
+            <button id="ofertasButton" style="display: none;" 
+            onclick="location.href='oferta.html'"> Ofertas </button>
+
+            <button id="postulacionesButton" style="display: none;" 
+            onclick="location.href='postulaciones.html'"> Postulaciones </button>
+
+            <button id="logoutButton" style="display: none;" 
+            onclick="cerrarSesion()"> Cerrar Sesión </button>
+
+            <button id="perfilButton" style="display: none;" 
+            onclick="location.href='cuenta.html'"> Mi Perfil </button>
+
+            <a id="cuenta"></a>
+    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <body>
+
+        <form>
+
+        <label>
+          <input id="titulo" type="text" placeholder="Introduce el nombre de la oferta">
+        </label>
+
+        <button type="button" onClick="mostrarOferta()">Buscar oferta</button>
+
+        </form>
+
+        <div id="ofertas">
+
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/scriptOferta.js"></script>
+    <script src="js/scriptUsuario.js"></script>
+    <script src="js/scriptPostulacion.js"></script>
+
+    <script>
+      const titulo = document.getElementById("titulo");
+
+       titulo.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          event.preventDefault(); 
+          mostrarOferta();
+        }
+      });
+
+      verificarSesion();
+    </script>
+</html>
