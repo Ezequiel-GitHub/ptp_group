@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html src="style.css">
+<head>
+    <title>Login - Punto Encuentro</title>
+</head>
+<body>
+    <h1 align="center">Iniciar Sesión</h1>
+    <div style="text-align:center;">
+        <form id="loginFrm">
+            <label>Email
+                <input id="email" type="email" placeholder="Ingresa tu correo" required>
+            </label>
+            <br><br>
+            <label>Password
+                <input id="password" type="password" placeholder="Ingresa tu password" required>
+            </label>
+            <br><br>
+            <button type="button" onclick="login()">Entrar</button>
+        </form>
+        <br>
+        <a>¿Aún no tienes una cuenta?</a>
+        <br>
+        <button type="button" onclick="window.location.href = 'register.html'">Registrate</button>
+        <div id="mensaje" style="margin-top:20px"></div>
+    </div>
+
+<script src="js/scriptUsuario.js"></script>
+</body>
+
+</html>
