@@ -1,0 +1,188 @@
+.navbar {
+    background-color: #181557;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.navbar h1 {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+.button-style {
+    background-color: #181557;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+.button-style:hover {
+    background-color: #392985;
+    transform: scale(1.1);
+}
+.button-styleR {
+    background-color: #EB661C;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+.button-styleR:hover {
+    background-color: #e20202;
+    transform: scale(1.1);
+}
+.button-styleI {
+    background-color: #ffffff;
+    color: #181557;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+.button-styleI:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+}
+#cuenta {
+    margin-left: auto;
+    color: white;
+    font-weight: 600;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+.ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.card-oferta {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+.card-oferta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.card-oferta h3 {
+    color: #181557;
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.card-oferta p {
+    color: #333;
+    margin: 8px 0;
+    font-size: 14px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.btn-postular {
+    background-color: #181557;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    width: 100%;
+}
+.btn-postular:hover {
+    background-color: #392985;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+#busquedaForm {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+}
+#titulo {
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    outline: none;
+}
+#titulo:focus {
+    border-color: #181557;
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f2329;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    z-index: 100;
+}
+.footer p {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+body {
+    padding-bottom: 80px;
+}

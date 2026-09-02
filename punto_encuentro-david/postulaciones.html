@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Postulaciones - PTP Group</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <header class="navbar">
+        <h1>Mis Postulaciones</h1>
+        
+        <nav class="nav-buttons">
+            <button class="button-styleI" id="registerButton" onclick="location.href='index.html'">
+            <i class="bi bi-arrow-left"></i> Volver</button>
+        </nav>
+    </header>
+
+
+
+
+    <div id="agregar"></div>
+    <div id="postulaciones">
+    
+    </div>
+</body>
+
+<script src="js/scriptPostulacion.js"></script>
+<script>
+    const datos = JSON.parse(localStorage.getItem("usuario"));
+
+    if (!datos) {
+        window.location.href = "index.html";
+        alert("Debes iniciar sesión para acceder a esta página");
+    }
+
+</script>
+
+<footer class="footer">
+    <p>© 2026 PTP Group. Todos los derechos reservados.</p>
+</footer>
+
+</html>
