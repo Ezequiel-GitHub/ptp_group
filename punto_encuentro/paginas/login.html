@@ -1,0 +1,31 @@
+<body>
+    <header class="navbar">
+        <h1>Iniciar Sesión</h1>
+        
+        <nav class="nav-buttons">
+            <button class="button-styleI" id="registerButton" onclick="location.href='index.html'">
+            <i class="bi bi-arrow-left"></i> Volver</button>
+        </nav>
+    </header>
+
+
+    <div style="text-align:center;">
+        <form id="loginFrm">
+            <label>Email
+                <input id="email" type="email" placeholder="Ingresa tu correo" required>
+            </label>
+            <br><br>
+            <label>Password
+                <input id="password" type="password" placeholder="Ingresa tu password" required>
+            </label>
+            <br><br>
+            <button type="button" onclick="login()" class="button-style">Entrar</button>
+        </form>
+        <br>
+        <a>¿Aún no tienes una cuenta?</a>
+        <br>
+        <button type="button" onclick="window.location.href = 'register.html'" class="button-style">Registrate</button>
+        <div id="mensaje" style="margin-top:20px"></div>
+    </div>
+
+</body>
