@@ -1,0 +1,370 @@
+
+/* ==============================
+   CONFIGURACIÓN GENERAL
+============================== */
+
+:root {
+    --azul: #201B59;
+    --azul-hover: #302B6A;
+    --naranja: #EB661C;
+    --naranja-hover: #D95712;
+    --texto: #252943;
+    --texto-secundario: #68738A;
+    --blanco: #FFFFFF;
+    --borde: #E2E6F0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--texto);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.96) 0%,
+            rgba(247, 249, 255, 0.95) 45%,
+            rgba(238, 243, 252, 0.97) 100%
+        );
+
+    position: relative;
+    isolation: isolate;
+}
+
+/* ==============================
+   IMAGEN DE FONDO
+============================== */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.15) 35%,
+            rgba(255, 255, 255, 0.85) 80%,
+            #FFFFFF 100%
+        ),
+        url("logo.png");
+
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.32;
+}
+
+/* ==============================
+   BARRA DE NAVEGACIÓN
+============================== */
+
+header {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 14px 5%;
+
+    background: var(--azul);
+    color: var(--blanco);
+
+    box-shadow: 0 5px 20px rgba(25, 22, 70, 0.16);
+}
+
+/* LOGO */
+
+#logo {
+    width: 140px;
+    height: 60px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+#logo:hover {
+    transform: scale(1.04);
+}
+
+/* MENÚ */
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* ENLACES DEL MENÚ */
+
+.enlace-menu,
+#logoutButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 16px;
+    border-radius: 9px;
+
+    color: #F4F3FF;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.enlace-menu:hover {
+    background: var(--azul-hover);
+    color: var(--blanco);
+    transform: translateY(-2px);
+}
+
+/* ENLACE ACTIVO */
+
+.enlace-menu.activo,
+.enlace-menu.active,
+.enlace-menu[aria-current="page"] {
+    background: var(--naranja);
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+/* CERRAR SESIÓN */
+
+#logoutButton {
+    background: var(--naranja);
+    color: var(--blanco);
+    border: none;
+}
+
+#logoutButton:hover {
+    background: var(--naranja-hover);
+    color: var(--blanco);
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   CONTENIDO PRINCIPAL
+============================== */
+
+#contenido {
+    width: min(1100px, 90%);
+    min-height: 300px;
+    margin: 45px auto;
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(226, 230, 240, 0.9);
+    border-radius: 20px;
+
+    box-shadow: 0 12px 40px rgba(32, 27, 89, 0.07);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* ==============================
+   TÍTULOS Y TEXTOS
+============================== */
+
+h1, h2, h3, h4, h5 {
+    color: var(--azul);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+p {
+    color: var(--texto-secundario);
+    line-height: 1.7;
+}
+
+/* ==============================
+   BOTONES GENERALES
+============================== */
+
+button,
+.btn {
+    border-radius: 9px;
+    font-weight: 600;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* BOTONES NARANJAS */
+
+.btn-primary,
+.btn-warning,
+.btn-naranja {
+    background-color: var(--naranja);
+    border-color: var(--naranja);
+    color: var(--blanco);
+}
+
+.btn-primary:hover,
+.btn-warning:hover,
+.btn-naranja:hover {
+    background-color: var(--naranja-hover);
+    border-color: var(--naranja-hover);
+    color: var(--blanco);
+}
+
+/* BOTONES AZULES */
+
+.btn-azul {
+    background-color: var(--azul);
+    border-color: var(--azul);
+    color: var(--blanco);
+}
+
+.btn-azul:hover {
+    background-color: var(--azul-hover);
+    border-color: var(--azul-hover);
+    color: var(--blanco);
+}
+
+/* ==============================
+   FORMULARIOS
+============================== */
+
+input,
+select,
+textarea,
+.form-control,
+.form-select {
+    border: 1px solid #D9DEEB;
+    border-radius: 9px;
+    padding: 11px 13px;
+    color: var(--texto);
+    background-color: #FFFFFF;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--naranja);
+    box-shadow: 0 0 0 0.2rem rgba(235, 102, 28, 0.15);
+    outline: none;
+}
+
+/* ==============================
+   TARJETAS
+============================== */
+
+.card {
+    border: 1px solid var(--borde);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 22px rgba(32, 27, 89, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(32, 27, 89, 0.12);
+}
+
+.card-title {
+    color: var(--azul);
+}
+
+/* ==============================
+   TABLAS
+============================== */
+
+.table thead th {
+    background: var(--azul);
+    color: var(--blanco);
+    border-color: var(--azul);
+}
+
+.table tbody tr:hover {
+    background-color: #FFF4EC;
+}
+
+/* ==============================
+   ENLACES
+============================== */
+
+#contenido a:not(.btn):not(.enlace-menu) {
+    color: #C94E0C;
+    text-decoration: none;
+}
+
+#contenido a:not(.btn):not(.enlace-menu):hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   DISEÑO RESPONSIVE
+============================== */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 4%;
+        gap: 12px;
+    }
+
+    header nav {
+        width: 100%;
+        gap: 6px;
+    }
+
+    .enlace-menu,
+    #logoutButton {
+        padding: 9px 11px;
+        font-size: 0.88rem;
+    }
+
+    #contenido {
+        width: 94%;
+        margin: 25px auto;
+        padding: 22px 17px;
+    }
+
+    body::before {
+        background-position: center;
+    }
+}
+
+@media (max-width: 420px) {
+    header nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .enlace-menu,
+    #logoutButton {
+        width: 100%;
+    }
+}
