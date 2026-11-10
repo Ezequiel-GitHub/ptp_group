@@ -1,0 +1,28 @@
+<br>
+<main>
+    <input id="titulo" type="text" placeholder="Buscar oferta...">
+    <button type="button" onclick="mostrarOferta()" class="button-style">Buscar</button>
+
+    <button type="button" onclick="mostrarFiltros()" class="button-style">Filtros</button>
+    <form style="display: none;" id="busquedaForm">
+        <label>Modalidad:</label>
+        <select id="modalidad">
+            <option value="todas">Todas</option>
+            <option value="presencial">Presencial</option>
+            <option value="remoto">Remoto</option>
+            <option value="hibrido">Híbrido</option>
+        </select>
+
+        <label>Jornada:</label>
+        <select id="jornada">
+            <option value="todas">Todas</option>
+            <option value="completa">Completa</option>
+            <option value="parcial">Parcial</option>
+            <option value="turnos">Por turnos</option>
+        </select>
+    </form>
+
+    <div id="ofertas" class="ofertas">
+        <!-- Aquí se mostrarán las ofertas -->
+    </div>
+</main>
