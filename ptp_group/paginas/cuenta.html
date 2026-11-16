@@ -1,0 +1,55 @@
+<body>
+
+    <main>
+        <section>
+            <h2>Datos del usuario</h2>
+            <nav class="nav-buttons">
+                <button class="button-style" id="editarBtn" onclick="editarCuenta()">Editar cuenta</button>
+                <button class="button-styleR" id="cancelarBtn" onclick="cancelarEditarCuenta()" style="display: none;">Cancelar</button>
+            </nav>
+            <div>
+                <p>
+                    <strong>Nombre:</strong>
+                    <span id="nombreUsuario"></span>
+                </p>
+                <p>
+                    <strong>Correo electrónico:</strong>
+                    <span id="emailUsuario"></span>
+                </p>
+                <p>
+                    <strong>Teléfono:</strong>
+                    <span id="telefonoUsuario"></span>
+                </p>
+                <p>
+                    <strong>Estado académico:</strong>
+                    <span id="estadoAcademico"></span>
+                    <button class="button-style" id="estadoAcademicoBtn" style="display: none;">Cambiar</button>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Mi currículum</h2>
+            <p>"Tus datos y CV serán utilizados exclusivamente para los procesos de selección de la empresa."</p>
+
+            <div id="cv">
+                <p>Sube tu currículum para completar tu perfil y poder postularte a ofertas.</p>
+                <label for="curriculum">Link del currículum:</label>
+                <input type="url" id="curriculum" placeholder="https://example.com/cv"></input>
+                <button type="button" id="cvBtn" class="button-style" onclick="subirCV()">Guardar currículum</button>
+            </div>
+        </section>
+
+        <button id="borrarBtn" onclick="confirmarEliminacion()" class="button-styleR">Eliminar cuenta</button>
+    
+
+        <br>
+        <section id="sectionPostulaciones">
+            <h1>Mis Postulaciones</h1>
+
+            <div id="postulaciones">
+            
+            </div>
+        </section>
+
+    </main>
