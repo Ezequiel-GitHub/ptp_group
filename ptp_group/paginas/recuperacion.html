@@ -1,0 +1,16 @@
+<body>
+    <div id="paso1" style="text-align:center;">
+        <h3>Recuperar contraseña</h3>
+        <input type="email" id="recuperacionEmail" placeholder="Ingresa tu email">
+        <button onclick="solicitarCodigo()">Enviar código</button>
+        <br><br>
+    </div>
+
+    <div id="paso2" style="text-align:center; display: none;" >
+        <h3>Ingresa el código enviado a tu correo</h3>
+        <input type="text" id="codigo" placeholder="Código de 6 dígitos" maxlength="6">
+        <input type="password" id="password" placeholder="Nueva contraseña">
+        <input type="checkbox" onclick="mostrarContraseña()">Mostrar contraseña</input>
+        <button onclick="cambiarContraseña()">Cambiar contraseña</button>
+    </div>
+</body>
