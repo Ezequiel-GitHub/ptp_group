@@ -1,0 +1,36 @@
+<br>
+<main>
+    <input id="titulo" type="text" placeholder="Buscar oferta...">
+    <button type="button" onclick="mostrarOferta()" class="button-style">Buscar</button>
+
+    <button type="button" onclick="mostrarFiltros()" class="button-style">Filtros</button>
+    <form style="display: none;" id="busquedaForm">
+        <label>Modalidad:</label>
+        <select id="modalidad">
+            <option value="">Todas</option>
+            <option value="presencial">Presencial</option>
+            <option value="remoto">Remoto</option>
+            <option value="hibrido">Híbrido</option>
+        </select>
+
+        <label>Salario Mensual:</label>
+        <select id="salario">
+            <option value="">Todas</option>
+            <option value="40000">$40.000 o más</option>
+            <option value="50000">$50.000 o más</option>
+            <option value="60000">$60.000 o más</option>
+            <option value="80000">$80.000 o más</option>
+            <option value="100000">$100.000 o más</option>
+            <option value="120000">$120.000 o más</option>
+            <option value="150000">$150.000 o más</option>
+        </select>
+
+        <label>Requisitos:</label>
+        <input type="text" id="requisitos" placeholder="Requisitos...">
+
+    </form>
+
+    <div id="ofertas" class="ofertas">
+        <!-- Aquí se mostrarán las ofertas -->
+    </div>
+</main>

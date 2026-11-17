@@ -1,0 +1,25 @@
+<body>
+
+    <div style="text-align:center;">
+        <form id="loginFrm">
+            <label>Email
+                <input id="email" type="email" placeholder="Ingresa tu correo" required>
+            </label>
+            <br><br>
+            <label>Password
+                <input id="password" type="password" placeholder="Ingresa tu password" required>
+            </label>
+            <br>
+            <input type="checkbox" onclick="mostrarContraseña()">Mostrar contraseña</input>
+            <br><br>
+            <button type="button" onclick="login()" class="button-style">Entrar</button>
+        </form>
+        <a onclick="cargarPagina('paginas/recuperacion.html')">¿Has olvidado tu contraseña?</a>
+        <br>
+        <a onclick="cargarPagina('paginas/register.html')">¿Aún no tienes una cuenta?</a>
+        <br>
+        <button type="button" onclick="cargarPagina('paginas/register.html')" class="button-style">Registrate</button>
+        <div id="mensaje" style="margin-top:20px"></div>
+    </div>
+
+</body>
